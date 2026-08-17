@@ -32,11 +32,12 @@ jobs:
           npx cap add android
           npx cap copy
 
-      - name: Setup Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'zulu'
-          java-version:'21'
+          - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'zulu'
+        java-version: '21'
+
 
       - name: Build APK with Gradle
         run: |
